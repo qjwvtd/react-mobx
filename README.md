@@ -1,7 +1,7 @@
 # react状态管理之mobx
 
 
-<react>
+<react依赖>
 
 react
 

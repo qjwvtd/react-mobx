@@ -34,7 +34,7 @@
         
             presets: ['env', 'react', 'stage-0'],
             
-            ~~plugins: ['transform-decorators-legacy','transform-decorators']~~
+            plugins: ['transform-decorators-legacy','transform-decorators']//不能少
             
         }
         

@@ -25,6 +25,8 @@ babel-preset-stage-0
 
 **mobx-react**
 
+<修饰器依赖>@observable/@observer
+
 **babel-plugin-transform-decorators**
 
 **babel-plugin-transform-decorators-legacy**
@@ -43,7 +45,7 @@ babel-preset-stage-0
         
             presets: ['env', 'react', 'stage-0'],
             
-            **plugins: ['transform-decorators-legacy','transform-decorators']**
+            ~~plugins: ['transform-decorators-legacy','transform-decorators']~~
             
         }
         

@@ -7,7 +7,7 @@ react
 
 react-dom
 
-<babel>
+<babel依赖>
 
 babel-core
 
@@ -19,15 +19,15 @@ babel-preset-react
 
 babel-preset-stage-0
 
-<mobx>
+<mobx核心包>
 
-mobx
+**mobx**
 
-mobx-react
+**mobx-react**
 
-babel-plugin-transform-decorators
+**babel-plugin-transform-decorators**
 
-babel-plugin-transform-decorators-legacy
+**babel-plugin-transform-decorators-legacy**
 
 在webpack.config.js中配置：
 
@@ -43,7 +43,7 @@ babel-plugin-transform-decorators-legacy
         
             presets: ['env', 'react', 'stage-0'],
             
-            plugins: ['transform-decorators-legacy','transform-decorators']
+            **plugins: ['transform-decorators-legacy','transform-decorators']**
             
         }
         

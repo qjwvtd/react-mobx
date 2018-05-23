@@ -1,23 +1,22 @@
 # react状态管理之mobx
 
 
-<react>/r/n
-"react": "^16.3.0"
-"react-dom": "^16.3.0"
-"react-router-dom": "^4.2.2"
+<react>
+react
+react-dom
 
 <babel>
-"babel-core": "^6.26.0",
-"babel-loader": "^7.1.4",
-"babel-preset-env": "^1.6.1",
-"babel-preset-react": "^6.24.1",
-"babel-preset-stage-0": "^6.24.1",
+babel-core
+babel-loader
+babel-preset-env
+babel-preset-react
+babel-preset-stage-0
 
 <mobx>
-"mobx": "^4.3.0",
-"mobx-react": "^5.1.2",
-"babel-plugin-transform-decorators": "^6.24.1",
-"babel-plugin-transform-decorators-legacy": "^1.3.4"
+mobx
+mobx-react
+babel-plugin-transform-decorators
+babel-plugin-transform-decorators-legacy
 
 在webpack.config.js中配置：plugins: ['transform-decorators-legacy','transform-decorators']：
 {

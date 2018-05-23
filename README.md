@@ -30,15 +30,25 @@ babel-plugin-transform-decorators
 babel-plugin-transform-decorators-legacy
 
 在webpack.config.js中配置：plugins: ['transform-decorators-legacy','transform-decorators']：
+
 {
+
     test: /\.(js|jsx)$/,
+    
     use: {
+    
         loader: 'babel-loader',
+        
         options: {
+        
             presets: ['env', 'react', 'stage-0'],
+            
             plugins: ['transform-decorators-legacy','transform-decorators']
+            
         }
+        
     }
+    
 }
 
 npm install

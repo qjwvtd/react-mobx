@@ -1,23 +1,12 @@
 # react状态管理之mobx
 
+将所有需要公共管理的状态纳入容器类。
 
-<react依赖>
+添加修饰@observable，被观察者。
 
-react
+需要改变状态的组件添加修饰@observer，观察者。
 
-react-dom
-
-<babel依赖>
-
-babel-core
-
-babel-loader
-
-babel-preset-env
-
-babel-preset-react
-
-babel-preset-stage-0
+在任何组件内部都能访问这个容器类，并改变其值。
 
 <mobx核心包>
 

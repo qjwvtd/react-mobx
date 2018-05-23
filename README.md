@@ -31,7 +31,7 @@ babel-preset-stage-0
 
 在webpack.config.js中配置：
 
-{
+`{
 
     test: /\.(js|jsx)$/,
     
@@ -49,7 +49,7 @@ babel-preset-stage-0
         
     }
     
-}
+}`
 
 npm install
 

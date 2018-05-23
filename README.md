@@ -1,19 +1,19 @@
 # react状态管理之mobx
 
 
-react
+<react>/r/n
 "react": "^16.3.0"
 "react-dom": "^16.3.0"
 "react-router-dom": "^4.2.2"
 
-babel
+<babel>
 "babel-core": "^6.26.0",
 "babel-loader": "^7.1.4",
 "babel-preset-env": "^1.6.1",
 "babel-preset-react": "^6.24.1",
 "babel-preset-stage-0": "^6.24.1",
 
-mobx
+<mobx>
 "mobx": "^4.3.0",
 "mobx-react": "^5.1.2",
 "babel-plugin-transform-decorators": "^6.24.1",

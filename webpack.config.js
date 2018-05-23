@@ -18,7 +18,7 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: ['env', 'react', 'stage-0'],
-                        plugins: ['transform-decorators-legacy','transform-decorators']
+                        plugins: ['transform-decorators-legacy','transform-decorators']//为mobx添加修饰器插件
                     }
                 }
             },

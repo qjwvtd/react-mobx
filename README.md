@@ -2,20 +2,31 @@
 
 
 <react>
+
 react
+
 react-dom
 
 <babel>
+
 babel-core
+
 babel-loader
+
 babel-preset-env
+
 babel-preset-react
+
 babel-preset-stage-0
 
 <mobx>
+
 mobx
+
 mobx-react
+
 babel-plugin-transform-decorators
+
 babel-plugin-transform-decorators-legacy
 
 在webpack.config.js中配置：plugins: ['transform-decorators-legacy','transform-decorators']：

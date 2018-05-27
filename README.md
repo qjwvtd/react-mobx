@@ -16,7 +16,7 @@
 
 **mobx-react**
 
-<修饰器依赖>@observable/@observer
+<修饰器依赖>@observable/@observer/@action
 
 **babel-plugin-transform-decorators**
 

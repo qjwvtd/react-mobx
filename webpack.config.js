@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 module.exports = {
-    mode: 'development',
+    mode:'development',//development/production
     entry: {
         index: path.resolve(__dirname, './web/js/index.js')
     },
@@ -52,7 +52,7 @@ module.exports = {
         port: 9000,
         hot: true
     },
-    plugins: [
+    plugins:[
         new webpack.HotModuleReplacementPlugin()
     ]
 };

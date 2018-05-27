@@ -6,6 +6,8 @@
 
 需要改变状态的组件添加修饰@observer，观察者。
 
+在组件中监听@action。
+
 在任何组件内部都能访问这个容器类，并改变其值。
 
 <mobx核心包>
@@ -41,6 +43,10 @@
     }
     
 }`
+
+注1:webpack-dev-server 3.1.0以后只支持webpack 4.0以上版本
+
+注2:开发环境配置mode:'development'，才能开启热更新
 
 npm install
 

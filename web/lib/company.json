@@ -1,0 +1,32 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "name": "百度",
+      "ceo": "李彦宏",
+      "link": "http://www.baidu.com/",
+      "address": "北京"
+    },
+    {
+      "id": 2,
+      "name": "网易",
+      "ceo": "丁磊",
+      "link": "http://www.163.com/",
+      "address": "广州"
+    },
+    {
+      "id": 3,
+      "name": "阿里巴巴",
+      "ceo": "马云",
+      "link": "https://www.1688.com/",
+      "address": "杭州"
+    },
+    {
+      "id": 4,
+      "name": "腾讯",
+      "ceo": "马化腾",
+      "link": "http://www.qq.com/",
+      "address": "深圳"
+    }
+  ]
+}

@@ -8,10 +8,10 @@ import {observable,computed,action} from 'mobx';
 //示例一
 export class User {
     @observable
-    dataList = {list:''};
+    dataList = {list:[]};
 }
 //示例二
 export class Company{
     @observable
-    dataList = {list:''};
+    dataList = {list:[]};
 }

@@ -2,16 +2,52 @@
  * 2018/5/23
  * administractor
  */
-import {observable,computed,action} from 'mobx';
+import {observable,action} from 'mobx';
 //observable，状态是被观察者
-//action，暴露给组件监听的action
-//示例一
+//action，动作
+
+//不使用action
 export class User {
     @observable
-    dataList = {list:[]};
+    dataList = {list:[],len:null};
 }
-//示例二
-export class Company{
+//使用action
+export class Company {
     @observable
-    dataList = {list:[]};
+    dataList = {list:[],len:null};
+    @action.bound
+    queryCompanyAction(name){
+        if(name.length > 0){
+            const arr = this.dataList.list;
+            const newArr = [];
+            for(let i=0;i<arr.length;i++){
+                if(arr[i].name == name){
+                    newArr.push(arr[i]);
+                }
+            }
+            this.dataList.list = newArr;
+            this.dataList.len = this.dataList.list.length;
+        }
+    }
+    @action.bound
+    addCompanyAction(o){
+        this.dataList.list.push(o);
+        this.dataList.len = this.dataList.list.length;
+    }
+    @action.bound
+    deleteCompanyAction(number){
+        this.dataList.list.splice(number,1);
+        this.dataList.len = this.dataList.list.length;
+    }
+    @action.bound
+    reLoadDataAction(){
+        $.ajax({
+            url:'./lib/company2.json',
+            success:(res) => {
+                this.dataList.list = res.list;
+                this.dataList.len = res.list.length;
+            }
+        });
+    }
 }
+

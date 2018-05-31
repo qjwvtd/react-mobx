@@ -1,0 +1,39 @@
+{
+  "list":[
+    {
+      "id": 1,
+      "name": "小米科技",
+      "ceo": "雷军",
+      "website": "https://www.mi.com/",
+      "city": "北京"
+    },
+    {
+      "id": 2,
+      "name": "京东集团",
+      "ceo": "刘强东",
+      "website": "http://www.jd.com",
+      "city": "深圳"
+    },
+    {
+      "id": 3,
+      "name": "新浪",
+      "ceo": "强朝阳",
+      "website": "http://www.sina.com.cn",
+      "city": "北京"
+    },
+    {
+      "id": 4,
+      "name": "奇虎360",
+      "ceo": "周董",
+      "website": "http://se.360.cn",
+      "city": "北京"
+    },
+    {
+      "id": 5,
+      "name": "搜狐",
+      "ceo": "张董",
+      "website": "http://www.sohu.com",
+      "city": "广州"
+    }
+  ]
+}

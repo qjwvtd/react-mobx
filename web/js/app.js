@@ -5,6 +5,7 @@ import {User,Company} from './store';
 
 const user = new User();
 const company = new Company();
+
 class PlayUser extends Component{
     constructor(props){
         super(props);
@@ -18,10 +19,23 @@ class PlayUser extends Component{
             "mobile":15895623495,
             "address":"西航港双华路168号1栋"
         };
-        user.addUser(userInfo);
+        user.dataList.list.unshift(userInfo);
     }
     delUser(){
-        user.delUser(0);
+        this.dataList.list.splice(0,1);
+    }
+    resetData(){
+        for(let i=0;i<user.dataList.list.length;i++){
+            user.dataList.list.splice(i,user.dataList.list.length);
+        }
+        $.ajax({
+            url:'./lib/user2.json',
+            success:(res) => {
+                for(let i=0;i<res.data.length;i++){
+                    user.dataList.list.push(res.data[i]);
+                }
+            }
+        });
     }
     render(){
         return (
@@ -29,6 +43,7 @@ class PlayUser extends Component{
                 <pre>"name": "GuoYu","age": "18岁","mobile":15895623495,"address":"西航港双华路168号1栋"</pre>
                 <button type="button" onClick={this.addUser.bind(this)}>添加上面的数据</button>&nbsp;
                 <button type="button" onClick={this.delUser.bind(this)}>删除第一条</button>
+                <button type="button" onClick={this.resetData.bind(this)}>获取新数据</button>
             </div>
         );
     }
@@ -186,7 +201,7 @@ class App extends Component{
     render(){
         return [
             <PlayUser key="addUser" />,
-            <UserTable key="userTable" users={user} />,
+            <UserTable key="userTable" />,
             <p key="华丽的分界线1" style={{background:'green',textAlign:'center',color:'#fff'}}>华丽的分界线</p>,
             <QueryCompany key="queryCompany" />,
             <CompanyTable key="CompanyTable" companys={company} />

@@ -1,0 +1,32 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "name": "旸谷科技",
+      "ceo": "赵丕强",
+      "link": "http://www.cdsunrise.net/",
+      "address": "成都"
+    },
+    {
+      "id": 2,
+      "name": "新浪",
+      "ceo": "张朝阳",
+      "link": "http://www.sina.com.cn/",
+      "address": "北京"
+    },
+    {
+      "id": 3,
+      "name": "京东",
+      "ceo": "刘强东",
+      "link": "https://www.jd.com/",
+      "address": "广州"
+    },
+    {
+      "id": 4,
+      "name": "小米科技",
+      "ceo": "雷军",
+      "link": "http://www.miui.com/",
+      "address": "北京"
+    }
+  ]
+}

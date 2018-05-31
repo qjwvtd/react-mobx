@@ -7,10 +7,6 @@ const user = new User();
 const company = new Company();
 
 class PlayUser extends Component{
-    constructor(props){
-        super(props);
-        this.state = {};
-    }
     queryUser(){
         const uName = this.refs.userName.value.replace(/\s/g,"");
         if(uName.length > 0){
@@ -56,10 +52,6 @@ class PlayUser extends Component{
     }
 }
 class PlayCompany extends Component{
-    constructor(props){
-        super(props);
-        this.state = {};
-    }
     queryCompany(){
         const uName = this.refs.userName.value.replace(/\s/g,"");
         company.queryCompanyAction(uName);

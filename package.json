@@ -31,7 +31,7 @@
     "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.1"
   },
-  "repository": "https://github.com/qjwvtd/webpack-dev-server.git",
+  "repository": "https://github.com/qjwvtd/react-mobx.git",
   "author": "qjwvtd",
   "license": "ISC"
 }

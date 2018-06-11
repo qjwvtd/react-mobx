@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import {observer} from 'mobx-react';
 import {User,Company} from './store';
 
-const user = new User();
-const company = new Company();
+export const user = new User();
+export const company = new Company();
 
 class PlayUser extends Component{
     queryUser(){

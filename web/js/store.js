@@ -14,7 +14,8 @@ export class User {
 //使用action
 export class Company {
     @observable dataList = {list:[],len:null};
-    @action.bound queryCompanyAction(name){
+    @action.bound
+    queryCompanyAction(name){
         if(name.length > 0){
             const arr = this.dataList.list;
             const newArr = [];
@@ -27,15 +28,18 @@ export class Company {
             this.dataList.len = this.dataList.list.length;
         }
     }
-    @action.bound addCompanyAction(o){
+    @action.bound
+    addCompanyAction(o){
         this.dataList.list.push(o);
         this.dataList.len = this.dataList.list.length;
     }
-    @action.bound deleteCompanyAction(number){
+    @action.bound
+    deleteCompanyAction(number){
         this.dataList.list.splice(number,1);
         this.dataList.len = this.dataList.list.length;
     }
-    @action.bound reLoadDataAction(){
+    @action.bound
+    reLoadDataAction(){
         $.ajax({
             url:'./lib/company2.json',
             success:(res) => {

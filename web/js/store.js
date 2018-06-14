@@ -7,12 +7,12 @@ import {observable,action,computed,autorun} from 'mobx';
 //action，动作
 
 //不使用action
-export class User {
+class User {
     @observable
     dataList = {list:[],len:null};
 }
 //使用action
-export class Company {
+class Company {
     @observable dataList = {list:[],len:null};
     @action.bound
     queryCompanyAction(name){
@@ -49,4 +49,5 @@ export class Company {
         });
     }
 }
-
+export const user = new User();
+export const company = new Company();

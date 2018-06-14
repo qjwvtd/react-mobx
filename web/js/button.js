@@ -4,7 +4,7 @@
  */
 import React,{ Component } from 'react';
 import ReactDOM from 'react-dom';
-import {user,company} from './app';
+import {user,company} from './store';
 
 
 export default class Button extends Component{

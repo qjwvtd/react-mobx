@@ -15,15 +15,14 @@ export default class Button extends Component{
             companyInfo:''
         };
     }
-    showUserInfo(){
-        this.setState({
-            userInfo:user
-        });
+    addUser(){
+        const userInfo = {"id": null,"name": "GuoYu","age": "18岁","mobile":15895623495,"address":"西航港双华路168号1栋"};
+        user.dataList.list.push(userInfo);
+        user.dataList.len = user.dataList.list.length;
     }
-    showCompanyInfo(){
-        this.setState({
-            companyInfo:company
-        });
+    addCompany(){
+        const companyInfo = {"id": Math.random()*100,"name": "脸书中国","ceo": "扎克伯格","website":"http://www.lianpula.net/","city":"北京"};
+        company.addCompanyAction(companyInfo);
     }
     clearAll(){
         user.dataList.list = [];
@@ -32,11 +31,9 @@ export default class Button extends Component{
     render(){
         return (
             [
-                <button key="showUserBtn" type="button" onClick={this.showUserInfo.bind(this)}>click me,showUserInfo</button>,
-                <div key="userinfo" style={{width:'360px'}}>{JSON.stringify(this.state.userInfo)}</div>,
-                <button key="showCompanyBtn" type="button" onClick={this.showCompanyInfo.bind(this)}>click me,showCompanyInfo</button>,
-                <div key="companyfo" style={{width:'360px'}}>{JSON.stringify(this.state.companyInfo)}</div>,
-                <button key="clear" type="button" onClick={this.clearAll.bind(this)}>click me,clearAll</button>
+                <button key="addUser" type="button" onClick={this.addUser.bind(this)}>click me,添加一个用户</button>,
+                <button key="addCompany" type="button" onClick={this.addCompany.bind(this)}>click me,添加一个公司</button>,
+                <button key="clear" type="button" onClick={this.clearAll.bind(this)}>click me,清除所有</button>
             ]
         );
     }

@@ -10,10 +10,30 @@ import {observable,action,computed,autorun} from 'mobx';
 class User {
     @observable
     dataList = {list:[],len:null};
+    @action.bound
+    initUser(){
+        $.ajax({
+            url:'./lib/user.json',
+            success:(res) => {
+                this.dataList.list = res.list;
+                this.dataList.len = res.list.length;
+            }
+        });
+    }
 }
 //使用action
 class Company {
     @observable dataList = {list:[],len:null};
+    @action.bound
+    initCompany(){
+        $.ajax({
+            url:'./lib/company.json',
+            success:(res) => {
+                this.dataList.list = res.list;
+                this.dataList.len = res.list.length;
+            }
+        });
+    }
     @action.bound
     queryCompanyAction(name){
         if(name.length > 0){

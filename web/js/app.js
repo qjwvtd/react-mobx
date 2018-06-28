@@ -78,15 +78,8 @@ class PlayCompany extends Component{
 //被改变状态的组件是观察者，observer
 @observer
 class UserTable extends Component{
-    componentDidMount(){
-        $.ajax({
-            url:'./lib/user.json',
-            success:(res) => {
-                //异步获取的数据要传给状态管理容器
-                user.dataList.list = res.list;
-                user.dataList.len = res.list.length;
-            }
-        });
+    componentWillMount(){
+        user.initUser();
     }
     render(){
         if(user.dataList.list.length > 0){
@@ -120,15 +113,8 @@ class UserTable extends Component{
 //被改变状态的组件是观察者，observer
 @observer
 class CompanyTable extends Component{
-    componentDidMount(){
-        $.ajax({
-            url:'./lib/company.json',
-            success:(res) => {
-                //异步获取的数据要传给状态管理容器
-                company.dataList.list = res.list;
-                company.dataList.len = res.list.length;
-            }
-        });
+    componentWillMount(){
+        company.initCompany();
     }
     render(){
         if(company.dataList.list.length > 0){
@@ -163,13 +149,11 @@ class CompanyTable extends Component{
 class App extends Component{
     render(){
         return [
-            <div key="line1" style={{padding:'5px',textAlign:'center',color:'orange'}}>不使用action</div>,
             <PlayUser key="playuser" />,
             <UserTable key="userTable" />,
             <hr key="hr1" />,
             <div key="line2" style={{textAlign:'center'}}>华丽的分界线</div>,
             <hr key="hr2" />,
-            <div key="line3" style={{padding:'5px',textAlign:'center',color:'orange'}}>使用action</div>,
             <PlayCompany key="playcompany" />,
             <CompanyTable key="companyTable" />
         ];

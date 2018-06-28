@@ -82,32 +82,28 @@ class UserTable extends Component{
         user.initUser();
     }
     render(){
-        if(user.dataList.list.length > 0){
-            return (
-                <div>
-                    <table border="0" cellSpacing="0" cellPadding="0" width="100%">
-                        <thead><tr><td>姓名</td><td>年龄</td><td>手机</td><td>地址</td></tr></thead>
-                        <tbody>
-                        {
-                            user.dataList.list.map((item,index) => {
-                                return (
-                                    <tr key={index}>
-                                        <td>{item.name}</td>
-                                        <td>{item.age}</td>
-                                        <td>{item.mobile}</td>
-                                        <td>{item.address}</td>
-                                    </tr>
-                                );
-                            })
-                        }
-                        </tbody>
-                    </table>
-                    <p style={{padding:'5px',textAlign:'center'}}>有{user.dataList.len}条数据</p>
-                </div>
-            );
-        }else{
-            return 'loading...';
-        }
+        return (
+            <div>
+                <table border="0" cellSpacing="0" cellPadding="0" width="100%">
+                    <thead><tr><td>姓名</td><td>年龄</td><td>手机</td><td>地址</td></tr></thead>
+                    <tbody>
+                    {
+                        user.dataList.list.map((item,index) => {
+                            return (
+                                <tr key={index}>
+                                    <td>{item.name}</td>
+                                    <td>{item.age}</td>
+                                    <td>{item.mobile}</td>
+                                    <td>{item.address}</td>
+                                </tr>
+                            );
+                        })
+                    }
+                    </tbody>
+                </table>
+                <p style={{padding:'5px',textAlign:'center'}}>有{user.dataList.len}条数据</p>
+            </div>
+        );
     }
 }
 //被改变状态的组件是观察者，observer
@@ -117,32 +113,28 @@ class CompanyTable extends Component{
         company.initCompany();
     }
     render(){
-        if(company.dataList.list.length > 0){
-            return (
-                <div>
-                    <table border="0" cellSpacing="0" cellPadding="0" width="100%">
-                        <thead><tr><td>公司名称</td><td>CEO</td><td>网址</td><td>所在地</td></tr></thead>
-                        <tbody>
-                        {
-                            company.dataList.list.map((item,index) => {
-                                return (
-                                    <tr key={index}>
-                                        <td>{item.name}</td>
-                                        <td>{item.ceo}</td>
-                                        <td>{item.website}</td>
-                                        <td>{item.city}</td>
-                                    </tr>
-                                );
-                            })
-                        }
-                        </tbody>
-                    </table>
-                    <p style={{padding:'5px',textAlign:'center'}}>有{company.dataList.len}条数据</p>
-                </div>
-            );
-        }else{
-            return 'loading...';
-        }
+        return (
+            <div>
+                <table border="0" cellSpacing="0" cellPadding="0" width="100%">
+                    <thead><tr><td>公司名称</td><td>CEO</td><td>网址</td><td>所在地</td></tr></thead>
+                    <tbody>
+                    {
+                        company.dataList.list.map((item,index) => {
+                            return (
+                                <tr key={index}>
+                                    <td>{item.name}</td>
+                                    <td>{item.ceo}</td>
+                                    <td>{item.website}</td>
+                                    <td>{item.city}</td>
+                                </tr>
+                            );
+                        })
+                    }
+                    </tbody>
+                </table>
+                <p style={{padding:'5px',textAlign:'center'}}>有{company.dataList.len}条数据</p>
+            </div>
+        );
     }
 }
 

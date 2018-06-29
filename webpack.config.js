@@ -25,10 +25,12 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+                exclude: /node_modules/,
                 use: [{loader: 'style-loader'}, {loader: 'css-loader'}]
             },
             {
                 test: /\.scss$/,
+                exclude: /node_modules/,
                 use: [
                     {loader: 'style-loader'},
                     {loader: 'css-loader', options: {modules: true, localIdentName: '[name]__[local]--[hash:base64:8]'}}
@@ -36,10 +38,12 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif)$/,
+                exclude: /node_modules/,
                 use: [{loader: 'url-loader', options: {limit: 8192}}]
             },
             {
                 test: /\.(eot|svg|ttf|woff)/,
+                exclude: /node_modules/,
                 use: [{loader: 'file-loader'}]
             }
         ]

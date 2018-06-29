@@ -9,7 +9,7 @@
     "react-router-dom": "^4.2.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --progress --host localhost --config ./webpack.config.js",
+    "start": "webpack-dev-server --config ./webpack.config.js",
     "dev": "webpack --mode development",
     "build": "webpack --mode production"
   },

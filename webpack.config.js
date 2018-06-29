@@ -50,6 +50,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, "./web"), //定位静态资源到web目录
         open: false, //是否自动打开浏览器
+        host:'localhost',
         port: 3333,
         hot: true
     },

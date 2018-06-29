@@ -8,10 +8,8 @@ import {observable,action,computed,autorun} from 'mobx';
 
 //不使用action
 class User {
-    @observable
-    dataList = {list:[],len:null};
-    @action.bound
-    initUser(){
+    @observable dataList = {list:[],len:null};
+    @action.bound initUser(){
         $.ajax({
             url:'./lib/user.json',
             success:(res) => {
@@ -24,8 +22,7 @@ class User {
 //使用action
 class Company {
     @observable dataList = {list:[],len:null};
-    @action.bound
-    initCompany(){
+    @action.bound initCompany(){
         $.ajax({
             url:'./lib/company.json',
             success:(res) => {
@@ -34,8 +31,7 @@ class Company {
             }
         });
     }
-    @action.bound
-    queryCompanyAction(name){
+    @action.bound queryCompanyAction(name){
         if(name.length > 0){
             const arr = this.dataList.list;
             const newArr = [];
@@ -48,18 +44,15 @@ class Company {
             this.dataList.len = this.dataList.list.length;
         }
     }
-    @action.bound
-    addCompanyAction(o){
+    @action.bound addCompanyAction(o){
         this.dataList.list.push(o);
         this.dataList.len = this.dataList.list.length;
     }
-    @action.bound
-    deleteCompanyAction(number){
+    @action.bound deleteCompanyAction(number){
         this.dataList.list.splice(number,1);
         this.dataList.len = this.dataList.list.length;
     }
-    @action.bound
-    reLoadDataAction(){
+    @action.bound reLoadDataAction(){
         $.ajax({
             url:'./lib/company2.json',
             success:(res) => {

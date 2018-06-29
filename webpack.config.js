@@ -14,11 +14,12 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {
                         presets: ['env', 'react', 'stage-0'],
-                        plugins: ['transform-decorators-legacy','transform-decorators']//为mobx添加修饰器插件
+                        plugins: ["transform-decorators-legacy","transform-decorators"]//为mobx添加修饰器配置
                     }
                 }
             },

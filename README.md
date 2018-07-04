@@ -12,37 +12,26 @@
 
 <mobx核心包>
 
-**mobx**
-
-**mobx-react**
+    mobx
+    mobx-react
 
 <修饰器依赖>@observable/@observer/@action
 
-**babel-plugin-transform-decorators**
-
-**babel-plugin-transform-decorators-legacy**
+    babel-plugin-transform-decorators
+    babel-plugin-transform-decorators-legacy
 
 在webpack.config.js中配置：
 
-`{
-
-    test: /\.(js|jsx)$/,
-    
-    use: {
-    
-        loader: 'babel-loader',
-        
-        options: {
-        
-            presets: ['env', 'react', 'stage-0'],
-            
-            plugins: ['transform-decorators-legacy','transform-decorators']//不能少
-            
+    {
+        test: /\.(js|jsx)$/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+                presets: ['env', 'react', 'stage-0'],
+                plugins: ['transform-decorators-legacy','transform-decorators']//不能少
+            }
         }
-        
     }
-    
-}`
 
 注1:webpack-dev-server 3.1.0以后只支持webpack 4.0以上版本
 
